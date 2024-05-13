@@ -63,7 +63,7 @@ body {
   font-weight: 400;
 }
 
-.d-flex div img {
+.amici  {
   width: 35px;
 }
 
@@ -74,6 +74,36 @@ body {
 
 #mainCard {
   background: linear-gradient(to bottom left, #212121 30%, black 70%);
+  overflow: hidden; 
+  position: relative;
+  border-radius: 10px;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.small-text {
+  font-size: 12px;
+  margin: 0;
+}
+
+.top-right-text {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
 #secondaColonna {
@@ -173,7 +203,7 @@ i:hover {
   align-items: center;
   gap: 1em;
   color: var(--secondary-color);
-  margin-top: 2rem;
+  margin-top: 0,5rem;
 }
 .control-buttons {
   display: flex;
