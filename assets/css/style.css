@@ -1,47 +1,48 @@
-html, body {
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
-#bg-first{
-    background-color: black;
+#bg-first {
+  background-color: black;
+  height: 92vh;
 }
 
-.grey-text{
-    color:#A7A7A7
+.grey-text {
+  color: #a7a7a7;
 }
 
-.row a:hover{
-    color: white;
-    transition: 250ms;
+.row a:hover {
+  color: white;
+  transition: 250ms;
 }
 
-.row a i:hover{
-    color: white;
-    transition: 250ms;
+.row a i:hover {
+  color: white;
+  transition: 250ms;
 }
 
-#plus{
-    background-color:#A7A7A7;
-    color: black;
+#plus {
+  background-color: #a7a7a7;
+  color: black;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0000; 
+  background: #0000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #4D4D4D;
+  background: #4d4d4d;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #787878;
-}/* STYLE COL DX  */
+  background: #787878;
+} /* STYLE COL DX  */
 
 .d-flex h5 {
   font-size: 1.1rem;
@@ -61,17 +62,17 @@ html, body {
 }
 
 .d-flex div img {
-  width: 40px;
+  width: 35px;
 }
 
-#primaColonna{
-    overflow-y: auto; 
-    height: 60vh;
+#primaColonna {
+  overflow-y: auto;
+  height: 30rem;
 }
 
-#secondaColonna{
-    overflow-y: auto; 
-    height: 100vh;
+#secondaColonna {
+  overflow-y: auto;
+  height: 92vh;
 }
 /***STYLE PLAYER*****/
 
@@ -98,7 +99,7 @@ html, body {
   align-items: center;
   position: relative;
 
-  height: 7rem;
+  height: 9vh;
   padding: var(--padding);
   color: var(--primary-color);
 }
@@ -165,6 +166,7 @@ i:hover {
   align-items: center;
   gap: 1em;
   color: var(--secondary-color);
+  margin-top: 2rem;
 }
 .control-buttons {
   display: flex;
