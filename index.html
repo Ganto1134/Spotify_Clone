@@ -15,7 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
   </head>
-  <body>
+  <body id="body">
     <div class="container-fluid">
       <div class="row">
         <!-- Prima colonna, grandezza 3, fissa -->
@@ -29,15 +29,89 @@
         </div>
 
         <!-- Seconda colonna, grandezza 7, scrollabile -->
-        <div class="col-7 bg-secondary" style="overflow-y: auto; height: 100vh">
+        <div class="col-7" style="overflow-y: auto; height: 100vh">
           <p>Colonna 2 scrollabile</p>
           <!-- Contenuto lungo per testare lo scroll -->
           <div style="height: 2000px">Contenuto molto lungo qui...</div>
         </div>
 
         <!-- Terza colonna, grandezza 2, fissa -->
-        <div class="col-2 bg-success vh-100">
-          <p>Colonna 3 fissa</p>
+        <div class="col-2 bg-black vh-100">
+          <!-- Atività amici in alto -->
+          <div
+            class="d-flex align-items-center justify-content-between text-light mt-3 mx-2"
+          >
+            <h5>Attività amici</h5>
+            <div class="justify-content-between">
+              <i class="bi bi-person-add mx-3"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+          <!-- div primo amico -->
+          <div class="text-light d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/search/image-27.jpg"
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4"
+                style="width: 40px"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>Charlie Hookham</h6>
+                <p class="mb-0">4 ore</p>
+              </div>
+              <div>
+                <p class="mb-1">In Camera · Yumi Zouma</p>
+                <p><i class="bi bi-disc me-1"></i> EP III</p>
+              </div>
+            </div>
+          </div>
+          <!-- div secondo amico  -->
+          <div class="text-light d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/main/image-16.jpg"
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4"
+                style="width: 40px"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>lightdark02</h6>
+                <p class="mb-0">8 ore</p>
+              </div>
+              <div>
+                <p class="mb-1">Aimed to Kill · JAde LeMac</p>
+                <p><i class="bi bi-disc me-1"></i> Aimed to Kill</p>
+              </div>
+            </div>
+          </div>
+          <!-- div terzo amico -->
+          <div class="text-light d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/main/image-12.jpg"
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4"
+                style="width: 40px"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>Valeria Traverso</h6>
+                <p class="mb-0">3 giorni</p>
+              </div>
+              <div>
+                <p class="mb-1">New Kings · Sleeping Wolf</p>
+                <p>
+                  <i class="bi bi-music-note-beamed me-1"></i> Twint Badass mood
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
