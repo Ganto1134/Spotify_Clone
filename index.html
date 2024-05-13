@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>Layout a Colonne</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    ciao mondo
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Prima colonna, grandezza 3, fissa -->
+        <div class="col-3 bg-primary vh-100">
+          <div>
+            <p>Colonna 1 fissa</p>
+          </div>
+          <div style="overflow-y: auto; height: 96vh">
+            <p style="height: 1000px">scroll</p>
+          </div>
+        </div>
+
+        <!-- Seconda colonna, grandezza 7, scrollabile -->
+        <div class="col-7 bg-secondary" style="overflow-y: auto; height: 100vh">
+          <p>Colonna 2 scrollabile</p>
+          <!-- Contenuto lungo per testare lo scroll -->
+          <div style="height: 2000px">Contenuto molto lungo qui...</div>
+        </div>
+
+        <!-- Terza colonna, grandezza 2, fissa -->
+        <div class="col-2 bg-success vh-100">
+          <p>Colonna 3 fissa</p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
