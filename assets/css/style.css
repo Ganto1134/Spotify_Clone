@@ -59,6 +59,15 @@
   width: 40px;
 }
 
+#primaColonna{
+    overflow-y: auto; 
+    height: 60vh;
+}
+
+#secondaColonna{
+    overflow-y: auto; 
+    height: 100vh;
+}
 /***STYLE PLAYER*****/
 
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
