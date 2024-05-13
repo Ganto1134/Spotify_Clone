@@ -1,0 +1,39 @@
+#bg-first{
+    background-color: black;
+}
+
+.grey-text{
+    color:#A7A7A7
+}
+
+.row a:hover{
+    color: white;
+    transition: 250ms;
+}
+
+.row a i:hover{
+    color: white;
+    transition: 250ms;
+}
+
+#plus{
+    background-color:#A7A7A7;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4D4D4D;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #787878;
+}
