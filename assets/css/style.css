@@ -1,3 +1,5 @@
+/***STYLE PLAYER*****/
+
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
 * {
@@ -157,3 +159,5 @@ i:hover{
 .volume-bar .progress-bar:hover .progress::after{
     --size: .8em;
 }
+
+/***STYLE PLAYER*****/
