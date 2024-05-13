@@ -1,3 +1,4 @@
+/* Lato sinistro */
 html,
 body {
   height: 100%;
@@ -71,9 +72,14 @@ body {
   height: 30rem;
 }
 
+#mainCard {
+  background: linear-gradient(to bottom left, #212121 30%, black 70%);
+}
+
 #secondaColonna {
   overflow-y: auto;
   height: 92vh;
+  background-color: #212121;
 }
 /***STYLE PLAYER*****/
 
