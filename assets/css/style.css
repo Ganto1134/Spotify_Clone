@@ -5,6 +5,7 @@ html, body {
 
 #bg-first{
     background-color: black;
+    height: 90vh;
 }
 
 .grey-text{
@@ -66,7 +67,7 @@ html, body {
 
 #primaColonna{
     overflow-y: auto; 
-    height: 60vh;
+    height: 30rem;
 }
 
 #secondaColonna{
