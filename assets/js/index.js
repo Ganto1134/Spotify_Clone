@@ -12,16 +12,15 @@ fetch(url)
         }
         return response.json();
     })
-    .then((data) => {
-        console.log(data);
-        let canzone = data.data;
-        canzone.shift();
+    .then((datoCanzone) => {
+        console.log(datoCanzone);
+        let canzone = datoCanzone.data;
         console.log(canzone);
 
         for (let i = 0; i < cards.length; i++) {
-            titles[i].innerHTML = canzone[i].title; // Uso del titolo della canzone
+            titles[i].innerHTML = canzone[i].title_short; // Uso del titolo della canzone
             par[i].innerHTML = canzone[i].artist.name; // Uso del nome dell'artista
-            a[i].innerHTML = canzone[i].title
+            a[i].innerHTML = canzone[i].title_short;
             // Aggiungere la copertina dell'album
             let img = cards[i].querySelector('.album');
             if (img) {
