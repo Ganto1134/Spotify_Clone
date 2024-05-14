@@ -15,6 +15,10 @@ body {
   color: #a7a7a7;
 }
 
+.bg-btn {
+  background-color: black!important;
+}
+
 .row a:hover {
   color: white;
   transition: 250ms;
