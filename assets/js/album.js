@@ -18,10 +18,11 @@ const getAlbumData = function () {
       console.log("DETTAGLI RECUPERATI", album);
 
       document.getElementById("album-image").src = album.cover_big;
+      document.querySelector(".img-fluid.rounded-circle").src = album.artist.picture_small;
       document.querySelector(".titolo-album").innerHTML = album.title;
       const durataInMinuti = album.duration / 60;
-    const durataFormattata = `${Math.floor(durataInMinuti)} min ${Math.floor(album.duration % 60)} sec`;
-    document.querySelector(".durata-album").innerHTML = durataFormattata;
+      const durataFormattata = `${Math.floor(durataInMinuti)} min ${Math.floor(album.duration % 60)} sec`;
+      document.querySelector(".durata-album").innerHTML = durataFormattata;
       document.querySelector(
         ".numero-brani"
       ).innerHTML = `${album.tracks.data.length} brani`;
@@ -37,7 +38,10 @@ const getAlbumData = function () {
       container.innerHTML = "";
       album.tracks.data.forEach((traccia, indice) => {
         const riproduzioniCasuali = Math.floor(Math.random() * 10101);
-        const durataInMinuti = (traccia.duration / 60).toFixed(2);
+        const durInMinuti = Math.floor(traccia.duration / 60);
+        const durSecondi = traccia.duration % 60;
+        const durFormattata = `${durInMinuti}:${durSecondi.toString().padStart(2, '0')}`;
+      
         const rigaHTML = `
         <div class="row align-items-center">
             <div class="col-md-1 mr-n3">
@@ -47,13 +51,13 @@ const getAlbumData = function () {
                 <p class="mb-1 font-weight-bold titolo-canzone">${
                   traccia.title
                 }</p>
-                <p class="nome-artista">${traccia.artist.name}</p>
+                <a class="text-white" href="artist.html?albumtId=${traccia.artist.id}"><p class="nome-artista">${traccia.artist.name}</p></a>
             </div>
             <div class="col-md-3 text-end">
                 <p class="riproduzioni-totali">${riproduzioniCasuali}</p>
             </div>
             <div class="col-md-2 text-end">
-                <p class="durata-canzone">${durataInMinuti}</p>
+                <p class="durata-canzone">${durFormattata}</p>
             </div>
         </div>
     `;
