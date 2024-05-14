@@ -133,6 +133,28 @@ body {
   height: 100%;
 }
 
+/* CARD GENERATE CON JS */
+
+.col-xl-3 .carta {
+  background-color: #171717;
+}
+
+.card-body {
+  padding-bottom: 0 !important;
+}
+
+.card-body .card-title {
+  color: white;
+}
+
+.card-body .card-text {
+  color: #909090;
+}
+
+.col-xl-3 .card {
+  padding-bottom: 0 !important;
+}
+
 /***STYLE PLAYER*****/
 
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
