@@ -51,7 +51,7 @@ const getAlbumData = function () {
                 <p class="mb-1 font-weight-bold titolo-canzone">${
                   traccia.title
                 }</p>
-                <a class="text-white" href="artist.html?albumtId=${traccia.artist.id}"><p class="nome-artista">${traccia.artist.name}</p></a>
+                <a class="text-white" href="artist.html?artistId=${traccia.artist.id}"><p class="nome-artista">${traccia.artist.name}</p></a>
             </div>
             <div class="col-md-3 text-end">
                 <p class="riproduzioni-totali">${riproduzioniCasuali}</p>
@@ -61,6 +61,10 @@ const getAlbumData = function () {
             </div>
         </div>
     `;
+                let artistaTop = document.querySelector('p a')
+                if (artistaTop) {
+                  artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
+              }
         container.insertAdjacentHTML("beforeend", rigaHTML);
       });
     })
