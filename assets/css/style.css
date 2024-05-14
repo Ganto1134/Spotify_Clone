@@ -232,7 +232,7 @@ i:hover {
   height: 4px;
   border-radius: 10px;
   width: 30%;
-  background-color: #ccc4;
+  background-color: #ccc4!important;
 }
 .progress {
   position: relative;
