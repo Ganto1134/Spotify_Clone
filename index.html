@@ -198,10 +198,16 @@
         <div class="col-12 col-md-9 col-lg-7" id="secondaColonna">
           <div class="d-flex justify-content-between align-items-center p-2">
             <div class="d-flex">
-              <button class="btn bg-btn rounded-pill me-2" type="button">
+              <button
+                class="d-none d-md-block btn bg-btn rounded-pill me-2"
+                type="button"
+              >
                 <i class="fas fa-chevron-left text-light"></i>
               </button>
-              <button class="btn bg-btn rounded-pill" type="button">
+              <button
+                class="d-none d-md-block btn bg-btn rounded-pill"
+                type="button"
+              >
                 <i class="fas fa-chevron-right text-light"></i>
               </button>
             </div>
@@ -209,16 +215,20 @@
               <img
                 src="https://placedog.net/30"
                 alt="Profile Image"
-                class="rounded-circle"
+                class="rounded-circle d-none d-md-block"
                 width="30"
                 height="30"
               />
-              <span class="ms-2 text-white">Lidia Nautilus...</span>
-              <i class="fas fa-caret-down ms-2 text-white"></i>
+              <span class="d-none d-md-block ms-2 text-white"
+                >Lidia Nautilus...</span
+              >
+              <i
+                class="d-none d-md-block fas fa-caret-down ms-2 text-white"
+              ></i>
             </div>
           </div>
 
-          <div class="h-25 mb-4" id="mainCard">
+          <div class="d-none d-md-block h-25 mb-4" id="mainCard">
             <div class="d-flex main-content mt-3 mx-3 mb-5 text-light">
               <div>
                 <img
@@ -252,10 +262,28 @@
             <div class="top-right-text text-secondary">NASCONDI ANNUNCI</div>
           </div>
 
-          <div class="container mt-5">
-            <h2 class="text-light">Buonasera</h2>
+          <div class="container mt-md-5">
             <div class="row">
-              <div class="col-4 mb-3">
+              <div
+                class="col-12 d-flex justify-content-between align-items-center p-2"
+              >
+                <h2 class="text-light">Buonasera</h2>
+                <!-- Icons for mobile view -->
+                <div class="d-flex d-lg-none">
+                  <i class="bi bi-bell fs-4 me-3 text-white"></i>
+                  <i class="bi bi-clock-history fs-4 me-3 text-white"></i>
+                  <i class="bi bi-gear fs-4 text-white"></i>
+                </div>
+                <!-- Icons for desktop view (hidden on mobile) -->
+                <div class="d-none d-lg-flex">
+                  <i class="bi bi-bell fs-4 me-4 text-white"></i>
+                  <i class="bi bi-clock-history fs-4 me-4 text-white"></i>
+                  <i class="bi bi-gear fs-4 text-white"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -266,12 +294,12 @@
                   />
                   <div class="playlist-text ms-3">
                     <p class="playlist-title fw-bold small">
-                      early stage emily syndrome<br />(sett-ott 2022)
+                      early stage emily syndrome
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="col-4 mb-3">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -285,7 +313,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 mb-3">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -301,7 +329,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 mb-3">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -317,7 +345,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 mb-3">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -331,7 +359,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4 mb-3">
+              <div class="col-6 col-md-4 mb-3">
                 <div
                   class="playlist-card d-flex align-items-center text-light border-0"
                 >
@@ -467,12 +495,15 @@
                 </div>
               </div>
               <div class="col-lg-4 col-xl-3 my-4">
-                <div class="card mb-4 p-3 shadow-sm carta h-100">
+                <div class="card mb-4 p-3 shadow-sm carta h-100 transform">
                   <a href="#" class="albumino">
                     <img
                       src="https://picsum.photos/id/237/300/200"
                       class="bd-placeholder-img card-img-top album"
                     />
+                    <button class="play-button">
+                      <i class="fa fa-play"></i>
+                    </button>
                   </a>
                   <div class="card-body px-1">
                     <h5 class="card-title titolo">non va</h5>
@@ -716,8 +747,8 @@
       </div>
     </div>
     <!------------PLAYER IN BASSO------------------->
-    <section class="sticky-bottom 0">
-      <div class="music-player">
+    <section class="sticky-bottom player-section">
+      <div class="music-player mb-md-5">
         <div class="song-bar">
           <div class="song-infos">
             <div class="image-container">
@@ -730,6 +761,7 @@
           </div>
           <div class="icons">
             <i class="far fa-heart"></i>
+            <i class="d-md-none play-pause fas fa-play"></i>
           </div>
         </div>
         <div class="progress-controller mt-3">
@@ -753,13 +785,26 @@
           <i class="pointer fas fa-desktop"></i>
           <div class="pointer volume-bar">
             <i class="pointer fas fa-volume-down"></i>
-
             <div class="pointer progress-bar">
               <div class="pointer progress"></div>
             </div>
           </div>
           <i class="fas fa-compress"></i>
         </div>
+      </div>
+      <div class="footer-mobile">
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-house-door-fill px-1"></i>
+          Home
+        </a>
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-search px-1"></i>
+          Cerca
+        </a>
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-collection px-1"></i>
+          La tua libreria
+        </a>
       </div>
     </section>
     <script
