@@ -6,7 +6,11 @@ let artista = document.querySelectorAll('.carta .card-body a')
 let albumCentro = document.querySelectorAll('.albumino')
 let albumSx = document.querySelectorAll('.albumSx')
 
-let url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=album%20pop';
+// let url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=album%20pop';
+
+document.getElementById('search-input').addEventListener('input', () => {
+    const searchValue = document.getElementById('search-input').value.trim();
+    const url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=' + encodeURIComponent(searchValue);
 
 fetch(url)
     .then(response => {
@@ -42,3 +46,5 @@ fetch(url)
         }
     })
     .catch(error => console.log('Non va e mo è pure colpa tua', error));
+    }
+)
