@@ -72,8 +72,6 @@ body {
   height: 30rem;
 }
 
-
-
 #mainCard {
   background: linear-gradient(to bottom left, #212121 30%, black 70%);
   overflow: hidden; 
@@ -113,30 +111,6 @@ body {
   height: 92vh;
   background-color: #212121;
 }
-
-/********** HOMEPAGE **********/
-.playlist-card {
-  background-color: #2c2c2c;
-  border-radius: 8px;
-}
-.playlist-img {
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.playlist-title {
-  font-size: 1rem;
-  margin: 0;
-}
-.bg-playlist {
-  background-color: #171717!important; 
-  height: 100%
-}
-
-
-
 /***STYLE PLAYER*****/
 
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
