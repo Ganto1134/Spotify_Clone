@@ -110,6 +110,7 @@ body {
   overflow-y: auto;
   height: 92vh;
   background-color: #212121;
+  overflow-x: hidden;
 }
 /***STYLE PLAYER*****/
 
@@ -278,8 +279,7 @@ i:hover {
 
 /******* Artist Page ********/
 #firstPart{
-    background-image: url(../imgs/others/lazza.jpg);
-    background-size: cover;
+    background-size:cover;
 }
 
 #verified{

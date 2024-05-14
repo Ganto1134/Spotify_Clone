@@ -80,17 +80,17 @@
           <div class="mx-n3" id="album-info">
           <div class="row"  id="album-info">
             <div class="d-flex justify-content-between align-items-center px-4 p-2">
-              <div class="d-flex">
-                <button class="btn btn-secondary btn-circle me-2" type="button">
-                  <i class="fas fa-chevron-left"></i>
+              <div class="d-flex ms-2">
+                <button class="btn bg-btn rounded-pill me-2" type="button">
+                  <i class="fas fa-chevron-left text-light"></i>
                 </button>
-                <button class="btn btn-secondary btn-circle" type="button">
-                  <i class="fas fa-chevron-right"></i>
+                <button class="btn bg-btn rounded-pill" type="button">
+                  <i class="fas fa-chevron-right text-light"></i>
                 </button>
               </div>
               <div class="d-flex align-items-center bg-black pe-2 rounded-5 ">
                 <img src="https://placedog.net/30" alt="Profile Image" class="rounded-circle" width="30" height="30">
-                <span class="ms-2 text-white">Lidia Nautilus...</span>
+                <span class="ms-2 text-white">Gruppo Uno</span>
                 <i class="fas fa-caret-down ms-2 text-white"></i>
               </div>
             </div>
@@ -101,20 +101,19 @@
               <div>
                 <img src="./assets/imgs/others/Gioventù Brucata.png" class="card-image" alt="Card image cap " id="album-image">
               </div>
-              <div class="text-content">
-                <p class="small-text">ALBUM</p>
-                <h1 id="titolo-album">GIOVENTU' BRUCATA</h1>
-                <p id="nome-artista" class="small-text mb-2 ">Pinguini Tattici Nucleari</p>
+              <div class="text-content mt-2">
+                <p class="small-text mt-4">ALBUM</p>
+                <h1 class="titolo-album mb-3">GIOVENTU' BRUCATA</h1>
                 <p class="small-text mb-2 font-weight-bold">
                   <span class="rounded-icon">
-                    <img style="max-width: 30px;" src="./assets/imgs/others/Gioventù Brucata.png" alt="Icona" class="img-fluid rounded-circle">
+                    <img style="max-width: 27px;" src="./assets/imgs/others/Gioventù Brucata.png" alt="Icona" class="img-fluid rounded-circle me-2">
                   </span>
-                  <span id="nome-artista">Nome artista</span>
+                  <a href="#" class="text-light"><span class="nome-artista">Nome artista</span></a>
                   <span> · </span>
-                  <span id="anno-album">Anno</span>
+                  <span class="anno-album">Anno</span>
                   <span> · </span>
-                  <span id="numero-brani">Numero brani</span>,
-                  <span id="durata-album" class="font-weight-normal">Durata album</span>
+                  <span class="numero-brani">Numero brani</span>,
+                  <span class="durata-album" class="font-weight-normal">Durata album</span>
                 </p>
                 
               </div>
@@ -123,7 +122,7 @@
         
           <!-- Seconda riga con icone -->
           <div class="row justify-content-start">
-            <div class="col-md-4">
+            <div class="col-md-12">
               <i class="mr-3 bi bi-play-circle-fill text-success" style="font-size: 3rem;"></i>
               <i class="mr-3 bi bi-heart" style="font-size: 2rem;"></i>
               <i class="mr-3 bi bi-download" style="font-size: 2rem;"></i>
@@ -132,36 +131,39 @@
           </div>
         
           <!-- Terza riga con colonne per nome canzone, riproduzioni e durata -->
-          <div class="row mb-n3">
-            <div class="col-md-1">
+          <div class="container">
+            <div class="row mb-n3 mt-3">
+            <div class="col-md-1  mr-n3">
               <p>#</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <p>TITOLO</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3  text-end">
               <p>RIPRODUZIONI</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2  text-end">
               <p><i class="bi bi-clock"></i></p>
             </div>
-          </div>
+          </div></div>
           <HR class="my-1 bg-secondary">
-            <div class="row">
+            <!-- Tracklist da generare dinamicamente -->
+            <div class="container" id="container-canzoni">
+            <div class="row align-items-center justify-content-between">
               <div class="col-md-1">
                 <p id="numero-traccia">1</p>
               </div>
               <div class="col-md-5 ">
-                <p class="small-text mb-2 font-weight-bold">Titolo canzone</p>
-                <P id="nome-artista">Nome artista</P>
+                <p class="mb-1 font-weight-bold titolo-canzone">Titolo canzone</p>
+                <P class="nome-artista">Nome artista</P>
               </div>
-              <div class="col-md-3 justify-content-end">
-                <p id="riproduzioni-totali">12345</p>
+              <div class="col-md-3 text-end">
+                <p class="riproduzioni-totali">12345</p>
               </div>
-              <div class="col-md-3">
-                <p>7.33</p>
+              <div class="col-md-3  text-end">
+                <p class="durata-canzone">7.33</p>
               </div>
-            </div>
+            </div></div>
         </div>
 
         <!-- Terza colonna, grandezza 2, fissa -->
