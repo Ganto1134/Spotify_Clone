@@ -110,6 +110,7 @@ body {
   overflow-y: auto;
   height: 92vh;
   background-color: #212121;
+  overflow-x: hidden;
 }
 /***STYLE PLAYER*****/
 
