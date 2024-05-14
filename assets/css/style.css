@@ -19,6 +19,28 @@ body {
   background-color: black!important;
 }
 
+.play-button {
+  position: absolute;
+  bottom: 180px;
+  right: 20px;
+  background-color: #1db954;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.carta:hover .play-button {
+  opacity: 1;
+}
+
+
+
 .row a:hover {
   color: white;
   transition: 250ms;
@@ -141,6 +163,10 @@ body {
 
 .col-xl-3 .carta {
   background-color: #171717;
+}
+
+.col-xl-3 .carta:hover {
+  background-color: transparent;
 }
 
 .card-body {
