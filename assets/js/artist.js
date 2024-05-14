@@ -20,6 +20,9 @@ const getArtistData = function () {
         getArtistInfo()
         const imgArtista = document.getElementById("artistImg")
         imgArtista.setAttribute("src", artist.picture)
+        // const linkBackground = "background-image: url(artist.picture_xl);"
+        const bgArtist = document.getElementById("firstPart")
+        bgArtist.setAttribute("style", `background-image: url(${artist.picture_xl});`)
     })
     .catch((err) => {
         console.log('ERRORE!', err)

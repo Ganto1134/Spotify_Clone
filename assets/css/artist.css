@@ -279,8 +279,7 @@ i:hover {
 
 /******* Artist Page ********/
 #firstPart{
-    background-image: url(../imgs/others/lazza.jpg);
-    background-size: cover;
+    background-size:cover;
 }
 
 #verified{
