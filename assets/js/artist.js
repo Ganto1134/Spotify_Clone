@@ -9,58 +9,63 @@ const getArtistData = function () {
         if (response.ok) {
           return response.json()
         } else {
-          switch (response.status) {
-            case 401:
-              throw new Error(
-                "Errore 401: Non autorizzato. Assicurati di avere le credenziali corrette."
-              );
-            case 403:
-              throw new Error(
-                "Errore 403: Accesso negato. Non hai i permessi per accedere a questa risorsa."
-              );
-            case 404:
-              throw new Error(
-                "Errore 404: Risorsa non trovata. Verifica l'URL e riprova."
-              );
-            case 500:
-              throw new Error(
-                "Errore 500: Errore interno del server. Riprova più tardi."
-              );
-            case 502:
-              throw new Error(
-                "Errore 502: Il server ha ricevuto una risposta non valida."
-              );
-            case 503:
-              throw new Error(
-                "Errore 503: Il server non è attualmente disponibile (sovraccarico o in manutenzione)."
-              );
-            case 504:
-              throw new Error(
-                "Errore 504: Il server ha impiegato troppo tempo a rispondere."
-              );
-            default:
-              if (response.status >= 400 && response.status < 500) {
-                throw new Error(
-                  `Errore client ${response.status}: ${response.statusText}`
-                );
-              } else if (response.status >= 500 && response.status < 600) {
-                throw new Error(
-                  `Errore server ${response.status}: ${response.statusText}`
-                );
-              }
-              throw new Error(`${response.status}: ${response.statusText}`);
-          }
+            throw new Error('Network response was not ok ' + response.statusText);
         }
       })
       .then((artist) => {
-        console.log('DETTAGLI RECUPERATI', artist)
-        document.getElementById('artistName').innerText = artist.name
-      })
-      .catch((err) => {
+        const artisti = document.querySelectorAll(".titolo")
+        artisti.forEach((artista)=>{
+           artista.innerText = artist.name
+        })
+        getArtistInfo()
+        const imgArtista = document.getElementById("artistImg")
+        imgArtista.setAttribute("src", artist.picture)
+    })
+    .catch((err) => {
         console.log('ERRORE!', err)
         alert(`An error occurred: ${err.message}`);
-      })
+    })
   }
   
   getArtistData()
   
+
+  const getArtistInfo = function(){
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
+        .then((response)=>{
+            if(response.ok){
+                return response.json()
+            } else {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+        })
+        .then((song)=>{
+                        console.log(song)
+                        let canzoni = song.data.slice(0, 5);
+                        canzoni.forEach((canzone, i)=>{
+                             divPopolari = document.getElementById("popolari")
+                             const newdiv = document.createElement("div")
+                             newdiv.innerHTML = `
+                             <div class="row align-items-center px-3">
+                                 <div class="col-7 d-flex mt-3 align-items-center">
+                                   <h6 class="grey-text me-4">${i+1}</h6>
+                                   <img src="${canzone.album.cover}" class="me-4" height="35px" alt="img">
+                                   <h6 class="text-light">${canzone.title_short}</h6>
+                                 </div>
+                                 <div class="col-4">
+                                   <h6 class="grey-text">100.000.000</h6>
+                                 </div>
+                                 <div class="col-1">
+                                   <h6 class="grey-text">3:19</h6>
+                                 </div>
+                               </div>`
+                            divPopolari.appendChild(newdiv)
+                        })
+
+            
+        })
+        .catch((err) => {
+            console.log('ERRORE!', err)
+            alert(`An error occurred: ${err.message}`);
+          })
+  }
