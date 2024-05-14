@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/artist.css" />
+    <link rel="icon" type="image/png" href="./assets/imgs/main/spoty.png"/>
+    <link rel="stylesheet" href="./assets/css/circular-font.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Prima colonna, grandezza 3, fissa -->
+        <div class="d-none d-md-block col-3" id="bg-first">
+          <a href="#"><i class="bi bi-three-dots grey-text fs-3"></i></a>
+          <div class="d-flex flex-column mt-2">
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><i class="bi bi-house-door-fill px-1 me-3"></i>Home</a>
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><i class="bi bi-search px-1 me-3"></i>Cerca</a>
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><i class="bi bi-collection px-1 me-3"></i></i>La tua libreria</a>
+          </div>
+          <div class="d-flex flex-column mt-4">
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><i class="bi bi-plus me-2 px-1 rounded-1" id="plus"></i> Crea playlist</a>
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><img src="./assets/imgs/others/love.png" class="me-2 rounded-1" alt="img" height="25px"> Brani che ti piacciono</a>
+            <a href="./index.html" class="text-decoration-none mt-2 grey-text w-75"><img src="./assets/imgs/others/episodes.png" class="me-2 rounded-1" alt="img" height="25px"> I tuoi episodi</a>
+          </div>
+          <hr class="grey-text">
+          <div id="primaColonna">
+            <div class="d-flex flex-column" id="overflow">
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">Nome playlist a caso</a>
+            <a class="text-decoration-none mt-2 grey-text" href="#">ultima</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seconda colonna, grandezza 7, scrollabile -->
+        <div class="col-12 col-md-9 col-lg-7 p-0" id="secondaColonna">
+          <section id="firstPart">
+          <div class="centered px-3">
+            <div class="d-flex justify-content-between align-items-center p-2">
+              <div class="d-flex">
+                <button class="btn bg-btn rounded-pill me-2" type="button">
+                  <i class="fas fa-chevron-left text-light"></i>
+                </button>
+                <button class="btn bg-btn rounded-pill" type="button">
+                  <i class="fas fa-chevron-right text-light"></i>
+                </button>
+              </div>
+              <div class="d-flex align-items-center bg-black pe-2 rounded-5 ">
+                <img src="https://placedog.net/30" alt="Profile Image" class="rounded-circle" width="30" height="30">
+                <span class="ms-2 text-white">Lidia Nautilus...</span>
+                <i class="fas fa-caret-down ms-2 text-white"></i>
+              </div>
+            </div>
+          <div>
+            <div class="d-flex" id="verified">
+              <img src="./assets/imgs/others/Legitly-Verified-Blue-Badge-top-page.png" alt="verified" height="18px">
+              <h6 class="text-light">Artista verificato</h6>
+            </div>
+            <h1 class="text-light display-3 fw-bolder">Lazza</h1>
+            <h6 class="text-light mt-4 pb-4">10.000.000 ascoltatori mensili</h6>
+          </div>
+        </div>
+        </section>
+        <section id="secondPart">
+          <div class="row p-3">
+            <div class="col d-flex align-items-center">
+              <i class="pointer play-pause fas fa-play me-4" id="playButton"></i>
+              <span class="text-light me-4 px-3 py-1 fw-semibold small" id="following">FOLLOWING</span>
+              <a href="#"><i class="bi bi-three-dots grey-text fs-3"></i></a>
+            </div>
+          </div>
+          <div class="row p-3">
+            <div class="col-7">
+              <h4 class="text-light fw-semibold">Popolari</h4>
+              <div class="row align-items-center px-3">
+                <div class="col-7 d-flex mt-3 align-items-center">
+                  <h6 class="grey-text me-4">1</h6>
+                  <img src="./assets/imgs/main/image-19.jpg" class="me-4" height="35px" alt="img">
+                  <h6 class="text-light">Cenere</h6>
+                </div>
+                <div class="col-4">
+                  <h6 class="grey-text">100.000.000</h6>
+                </div>
+                <div class="col-1">
+                  <h6 class="grey-text">3:19</h6>
+                </div>
+              </div>
+              <div class="row align-items-center px-3">
+                <div class="col-7 d-flex mt-3 align-items-center">
+                  <h6 class="grey-text me-4">1</h6>
+                  <img src="./assets/imgs/main/image-19.jpg" class="me-4" height="35px" alt="img">
+                  <h6 class="text-light">Cenere</h6>
+                </div>
+                <div class="col-4">
+                  <h6 class="grey-text">100.000.000</h6>
+                </div>
+                <div class="col-1">
+                  <h6 class="grey-text">3:19</h6>
+                </div>
+              </div>
+              <div class="row align-items-center px-3">
+                <div class="col-7 d-flex mt-3 align-items-center">
+                  <h6 class="grey-text me-4">1</h6>
+                  <img src="./assets/imgs/main/image-19.jpg" class="me-4" height="35px" alt="img">
+                  <h6 class="text-light">Cenere</h6>
+                </div>
+                <div class="col-4">
+                  <h6 class="grey-text">100.000.000</h6>
+                </div>
+                <div class="col-1">
+                  <h6 class="grey-text">3:19</h6>
+                </div>
+              </div>
+              <div class="row align-items-center px-3">
+                <div class="col-7 d-flex mt-3 align-items-center">
+                  <h6 class="grey-text me-4">1</h6>
+                  <img src="./assets/imgs/main/image-19.jpg" class="me-4" height="35px" alt="img">
+                  <h6 class="text-light">Cenere</h6>
+                </div>
+                <div class="col-4">
+                  <h6 class="grey-text">100.000.000</h6>
+                </div>
+                <div class="col-1">
+                  <h6 class="grey-text">3:19</h6>
+                </div>
+              </div>
+              <div class="row align-items-center px-3">
+                <div class="col-7 d-flex mt-3 align-items-center">
+                  <h6 class="grey-text me-4">1</h6>
+                  <img src="./assets/imgs/main/image-19.jpg" class="me-4" height="35px" alt="img">
+                  <h6 class="text-light">Cenere</h6>
+                </div>
+                <div class="col-4">
+                  <h6 class="grey-text">100.000.000</h6>
+                </div>
+                <div class="col-1">
+                  <h6 class="grey-text">3:19</h6>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-5">
+              <h4 class="text-light fw-semibold">Brani che ti piacciono</h4>
+              <div class="d-flex align-items-center mt-3">
+                <img src="./assets/imgs/main/image-12.jpg" alt="img" height="60px" class="rounded-5">
+                <img src="./assets/imgs/others/love.png" alt="img" class="rounded-5" id="likedSongs" height="18px">
+                <div class="ms-2">
+                  <h6 class="text-light"> Hai messo Mi piace a 11 brani</h6>
+                  <h6 class="grey-text">Di Lazza</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+
+        <!-- Terza colonna, grandezza 2, fissa -->
+        <div class="d-none d-lg-block col-2 bg-black vh-100">
+          <!-- Atività amici in alto -->
+          <div
+            class="d-flex align-items-baseline justify-content-between text-light mt-4 mb-5"
+          >
+            <h5 class="mt-1">Attività amici</h5>
+            <div class="justify-content-between">
+              <i class="bi bi-person-add mx-3"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+          <!-- div primo amico -->
+          <div class="d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/search/image-27.jpg "
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4 amici"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>Charlie Hookham</h6>
+                <p class="mb-0 mini">4 ore</p>
+              </div>
+              <div class="mini">
+                <p class="mb-1">In Camera · Yumi Zouma</p>
+                <p><i class="bi bi-disc me-1"></i> EP III</p>
+              </div>
+            </div>
+          </div>
+          <!-- div secondo amico  -->
+          <div class="d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/main/image-16.jpg"
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4 amici"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>lightdark02</h6>
+                <p class="mb-0 mini">8 ore</p>
+              </div>
+              <div class="mini">
+                <p class="mb-1">Aimed to Kill · JAde LeMac</p>
+                <p><i class="bi bi-disc me-1"></i> Aimed to Kill</p>
+              </div>
+            </div>
+          </div>
+          <!-- div terzo amico -->
+          <div class="d-flex mt-4">
+            <div>
+              <img
+                src="./assets/imgs/main/image-12.jpg"
+                alt=""
+                class="img-fluid rounded-circle ms-1 me-4 amici"
+              />
+            </div>
+            <div class="d-flex flex-column w-100">
+              <div class="d-flex justify-content-between">
+                <h6>Valeria Traverso</h6>
+                <p class="mb-0 mini">3 giorni</p>
+              </div>
+              <div class="mini">
+                <p class="mb-1">New Kings · Sleeping Wolf</p>
+                <p>
+                  <i class="bi bi-music-note-beamed me-1"></i> Twint Badass mood
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------PLAYER IN BASSO------------------->
+    <section class="sticky-bottom 0">
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-infos">
+            <div class="image-container">
+              <img src="https://www.placedog.net/100" alt="" />
+            </div>
+            <div class="song-description pointer">
+              <p class="title">test titolo</p>
+              <p class="artist">test artista</p>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+        <div class="progress-controller">
+          <div class="control-buttons">
+            <i class="pointer fas fa-random"></i>
+            <i class="pointer fas fa-step-backward"></i>
+            <i class="pointer play-pause fas fa-play"></i>
+            <i class="pointer fas fa-step-forward"></i>
+            <i class="pointer fas fa-undo-alt"></i>
+          </div>
+          <div class="progress-container">
+            <span>0:49</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span>3:15</span>
+          </div>
+        </div>
+        <div class="pointer other-features">
+          <i class="pointer fas fa-list-ul"></i>
+          <i class="pointer fas fa-desktop"></i>
+          <div class="pointer volume-bar">
+            <i class="pointer fas fa-volume-down"></i>
+
+            <div class="pointer progress-bar">
+              <div class="pointer progress"></div>
+            </div>
+          </div>
+          <i class="fas fa-compress"></i>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
