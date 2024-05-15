@@ -1,0 +1,84 @@
+
+const addressBarContent = new URLSearchParams(location.search)
+console.log(addressBarContent)
+const artistId = addressBarContent.get('artistId')
+
+const getArtistData = function () {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json()
+        } else {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+      })
+      .then((artist) => {
+        const artisti = document.querySelectorAll(".titolo")
+        artisti.forEach((artista)=>{
+           artista.innerText = artist.name
+        })
+        getArtistInfo()
+        const imgArtista = document.getElementById("artistImg")
+        imgArtista.setAttribute("src", artist.picture)
+        // const linkBackground = "background-image: url(artist.picture_xl);"
+        const bgArtist = document.getElementById("firstPart")
+        bgArtist.setAttribute("style", `background-image: url(${artist.picture_xl});`)
+    })
+    .catch((err) => {
+        console.log('ERRORE!', err)
+        alert(`An error occurred: ${err.message}`);
+    })
+  }
+  
+  getArtistData()
+  
+
+  const getArtistInfo = function(){
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${artistId}/top?limit=50`)
+        .then((response)=>{
+            if(response.ok){
+                return response.json()
+            } else {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+        })
+        .then((song)=>{
+            console.log(song)
+            let canzoni = song.data.slice(0, 5);
+            canzoni.forEach((canzone, i)=>{
+                const durataInMinuti = Math.floor(canzone.duration / 60);
+                const durataSecondi = canzone.duration % 60;
+                const durataFormattata = `${durataInMinuti}:${durataSecondi.toString().padStart(2, '0')}`;
+                divPopolari = document.getElementById("popolari");
+                const newdiv = document.createElement("div");
+                newdiv.innerHTML = `
+                    <div class="row align-items-center mt-2 p-2" tabindex="0" id="rowSongs">
+                        <div class="col-7 d-flex align-items-center">
+                            <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
+                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
+                            <h6 class="text-light">${canzone.title_short}</h6>
+                        </div>
+                        <div class="col-4">
+                            <h6 class="grey-text">100.000.000</h6>
+                        </div>
+                        <div class="col-1">
+                            <h6 class="grey-text">${durataFormattata}</h6>
+                        </div>
+                    </div>`;
+                divPopolari.appendChild(newdiv);
+                const row = newdiv.querySelector('.row');
+                const trackNumberElement = newdiv.querySelector('#numSong');
+                row.addEventListener('mouseover', () => {
+                    trackNumberElement.innerHTML = `<i class="fa fa-play small"></i>`;
+                });
+                row.addEventListener('mouseout', () => {
+                    trackNumberElement.textContent = i + 1;
+                });
+            });
+        })
+        
+        .catch((err) => {
+            console.log('ERRORE!', err)
+            alert(`An error occurred: ${err.message}`);
+          })
+  }
