@@ -46,10 +46,10 @@ const getArtistInfo = function() {
                 const durataFormattata = `${durataInMinuti}:${durataSecondi.toString().padStart(2, '0')}`;
                 const newdiv = document.createElement("div");
                 newdiv.innerHTML = `
-                    <div class="row align-items-center px-3 song-item">
-                        <div class="col-7 d-flex mt-3 align-items-center">
-                            <h6 class="grey-text me-4">${i + 1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4" height="35px" alt="img">
+                    <div class="row align-items-center mt-2 p-2 song-row" tabindex="0">
+                        <div class="col-7 d-flex align-items-center">
+                            <h6 class="grey-text me-4 numSong">${i+1}</h6>
+                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
                             <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
                         </div>
                         <div class="col-4">
@@ -64,6 +64,16 @@ const getArtistInfo = function() {
                 // Aggiungi event listener al titolo della canzone
                 newdiv.querySelector('.song-title').addEventListener('click', () => {
                     updateSongInfo(canzone);
+                });
+
+                // Aggiungi event listener per l'hover sulla riga della canzone
+                const row = newdiv.querySelector('.song-row');
+                const trackNumberElement = newdiv.querySelector('.numSong');
+                row.addEventListener('mouseover', () => {
+                    trackNumberElement.innerHTML = `<i class="fa fa-play small"></i>`;
+                });
+                row.addEventListener('mouseout', () => {
+                    trackNumberElement.textContent = i + 1;
                 });
             });
         })
