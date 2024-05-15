@@ -185,7 +185,7 @@
           </div>
 
           <!-- Seconda riga con icone -->
-          <div class="row justify-content-start">
+          <div class="row justify-content-start d-none d-md-flex">
             <div class="col-md-12">
               <i
                 class="mr-3 bi bi-play-circle-fill text-success"
@@ -196,9 +196,24 @@
               <i class="bi bi-three-dots" style="font-size: 2rem"></i>
             </div>
           </div>
-
+          <div
+            class="row justify-content-between justify-content-between d-md-none d-flex"
+          >
+            <div class="d-flex col-8 align-items-center">
+              <i class="mr-4 bi bi-heart" style="font-size: 2rem"></i>
+              <i class="mr-4 bi bi-download" style="font-size: 2rem"></i>
+              <i class="bi bi-three-dots" style="font-size: 2rem"></i>
+            </div>
+            <div class="col-4 align-items-center text-end">
+              <i class="mr-4 bi bi-shuffle" style="font-size: 2rem"></i>
+              <i
+                class="bi bi-play-circle-fill text-success"
+                style="font-size: 3rem"
+              ></i>
+            </div>
+          </div>
           <!-- Terza riga con colonne per nome canzone, riproduzioni e durata -->
-          <div class="container">
+          <div class="container d-none d-md-block" id="titolo-colonne">
             <div class="row mb-n3 mt-3">
               <div class="col-md-1 mr-n3">
                 <p>#</p>
