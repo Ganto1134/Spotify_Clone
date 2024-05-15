@@ -61,6 +61,10 @@ const getAlbumData = function () {
             </div>
         </div>
     `;
+            let artistaTop = document.querySelector('p a')
+            if (artistaTop) {
+              artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
+          }
         container.insertAdjacentHTML("beforeend", rigaHTML);
       });
 
