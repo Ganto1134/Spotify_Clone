@@ -62,7 +62,7 @@ const getArtistInfo = function() {
                 divPopolari.appendChild(newdiv);
 
                 // Aggiungi event listener al titolo della canzone
-                newdiv.querySelector('.song-title').addEventListener('click', () => {
+                newdiv.querySelector('.song-row').addEventListener('click', () => {
                     updateSongInfo(canzone);
                 });
 
