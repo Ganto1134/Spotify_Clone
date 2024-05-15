@@ -16,7 +16,7 @@ body {
 }
 
 .bg-btn {
-  background-color: black!important;
+  background-color: black !important;
 }
 
 .play-button {
@@ -34,24 +34,22 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(10px); 
-  transition: opacity 0.3s, transform 0.3s; 
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .carta:hover .play-button {
   opacity: 1;
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
-.play-button:hover{
+.play-button:hover {
   scale: 1.05;
 }
 
-.play-button:active{
+.play-button:active {
   background-color: #168a3f;
 }
-
-
 
 .row a:hover {
   color: white;
@@ -361,17 +359,17 @@ i:hover {
 }
 /***STYLE PLAYER*****/
 @media (max-width: 768px) {
-
-  .progress-controller, .volume-bar, .other-features {
+  .progress-controller,
+  .volume-bar,
+  .other-features {
     display: none; /* Hide elements not needed on mobile */
   }
-.footer-mobile {
-  display: block;
-  background-color: black;
-  opacity: 0.7;
-  padding-bottom: 0.7;
-
-}
+  .footer-mobile {
+    display: block;
+    background-color: black;
+    opacity: 0.7;
+    padding-bottom: 0.7;
+  }
   .song-bar {
     display: flex;
     justify-content: space-between;
@@ -386,7 +384,6 @@ i:hover {
     width: 96%;
     margin-inline: auto;
     background-color: #282828;
-
   }
   .image-container {
     --size: -1.5em;
@@ -412,7 +409,8 @@ i:hover {
     overflow: hidden; /* Prevents text from overflowing */
   }
 
-  .title, .artist {
+  .title,
+  .artist {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; /* Adds ellipsis if text is too long */
@@ -436,7 +434,7 @@ i:hover {
 
   .player-section {
     position: fixed;
-    bottom: 10vh; 
+    bottom: 10vh;
     width: 100%;
     background-color: transparent;
     z-index: 1000;
@@ -453,7 +451,7 @@ i:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top:1px solid gray;
+    border-top: 1px solid gray;
   }
 
   .footer-mobile a {
@@ -468,4 +466,9 @@ i:hover {
   .footer-mobile i {
     font-size: 24px; /* Icon size */
   }
+}
+
+#basso {
+  max-width: 100%;
+  width: 55px;
 }

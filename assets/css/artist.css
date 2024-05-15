@@ -63,7 +63,7 @@ body {
   font-weight: 400;
 }
 
-.amici  {
+.amici {
   width: 35px;
 }
 
@@ -74,7 +74,7 @@ body {
 
 #mainCard {
   background: linear-gradient(to bottom left, #212121 30%, black 70%);
-  overflow: hidden; 
+  overflow: hidden;
   position: relative;
   border-radius: 10px;
 }
@@ -204,7 +204,7 @@ i:hover {
   align-items: center;
   gap: 1em;
   color: var(--secondary-color);
-  margin-top: 0,5rem;
+  margin-top: 0, 5rem;
 }
 .control-buttons {
   display: flex;
@@ -233,7 +233,7 @@ i:hover {
   height: 4px;
   border-radius: 10px;
   width: 30%;
-  background-color: #ccc4!important;
+  background-color: #ccc4 !important;
 }
 .progress {
   position: relative;
@@ -278,41 +278,41 @@ i:hover {
 /***STYLE PLAYER*****/
 
 /******* Artist Page ********/
-#firstPart{
-    background-size:cover;
+#firstPart {
+  background-size: cover;
 }
 
-#verified{
-    margin-top: 7em;
+#verified {
+  margin-top: 7em;
 }
 
-#playButton{
-    background-color: #65D36D;
+#playButton {
+  background-color: #65d36d;
 }
 
-#following{
-    border: 1px white solid;
-    border-radius: 4px;
+#following {
+  border: 1px white solid;
+  border-radius: 4px;
 }
 
-#likedSongs{
-    position: relative;
-    top: 20px;
-    right: 15px;
+#likedSongs {
+  position: relative;
+  top: 20px;
+  right: 15px;
 }
 
 .bg-btn {
-    background-color: black!important;
-  }
+  background-color: black !important;
+}
 
-.row.align-items-center.mt-2.p-2:hover{
-  background-color:#7878787e;
+.row.align-items-center.mt-2.p-2:hover {
+  background-color: #7878787e;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.row.align-items-center.mt-2.p-2:focus{
-  background-color:#a8a8a87e;
+.row.align-items-center.mt-2.p-2:focus {
+  background-color: #a8a8a87e;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -329,14 +329,18 @@ i:hover {
   justify-content: center;
   align-items: center;
 }
-.play-button:active{
+.play-button:active {
   background-color: #168a3f;
 }
-.play-button:hover{
+.play-button:hover {
   scale: 1.05;
 }
 
-
-#numSong{
+#numSong {
   width: 10%;
+}
+
+#basso {
+  max-width: 100%;
+  width: 55px;
 }
