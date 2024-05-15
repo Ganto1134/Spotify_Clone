@@ -52,10 +52,10 @@ const getArtistData = function () {
                 divPopolari = document.getElementById("popolari");
                 const newdiv = document.createElement("div");
                 newdiv.innerHTML = `
-                    <div class="row align-items-center px-3">
-                        <div class="col-7 d-flex mt-3 align-items-center">
+                    <div class="row align-items-center mt-2 p-2">
+                        <div class="col-7 d-flex align-items-center">
                             <h6 class="grey-text me-4">${i+1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4" height="35px" alt="img">
+                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
                             <h6 class="text-light">${canzone.title_short}</h6>
                         </div>
                         <div class="col-4">
