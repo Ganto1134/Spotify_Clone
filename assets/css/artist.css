@@ -308,8 +308,15 @@ i:hover {
 .row.align-items-center.mt-2.p-2:hover{
   background-color:#7878787e;
   border-radius: 5px;
+  cursor: pointer;
 }
 
+.row.align-items-center.mt-2.p-2:focus{
+  background-color:#a8a8a87e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 .play-button {
   background-color: #1db954;
@@ -324,4 +331,12 @@ i:hover {
 }
 .play-button:active{
   background-color: #168a3f;
+}
+.play-button:hover{
+  scale: 1.05;
+}
+
+
+#numSong{
+  width: 10%;
 }
