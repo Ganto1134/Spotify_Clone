@@ -1,0 +1,9 @@
+@media (max-width: 400px) {
+    #album-image {
+      width: 100%;
+      max-width: 400px; /* Limita la larghezza massima a 400px */
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Centra l'immagine */
+    }
+  }

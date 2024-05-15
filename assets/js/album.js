@@ -43,28 +43,33 @@ const getAlbumData = function () {
         const durFormattata = `${durInMinuti}:${durSecondi.toString().padStart(2, '0')}`;
       
         const rigaHTML = `
-        <div class="row align-items-center">
-            <div class="col-md-1 mr-n3">
+        <div class="row">
+        <div class="d-flex align-items-center justify-content-between">
+        <div class="col-md-1 p-0 mr-n3 d-none d-md-block">
                 <p id="numero-traccia-${indice}">${indice + 1}</p>
             </div>
-            <div class="col-md-6">
-                <p class="mb-1 font-weight-bold titolo-canzone pointer">${
-                  traccia.title
-                }</p>
-                <a class="text-white" href="artist.html?artistId=${traccia.artist.id}"><p class="nome-artista">${traccia.artist.name}</p></a>
-            </div>
-            <div class="col-md-3 text-end">
-                <p class="riproduzioni-totali">${riproduzioniCasuali}</p>
-            </div>
-            <div class="col-md-2 text-end">
-                <p class="durata-canzone">${durFormattata}</p>
-            </div>
+        <div class="col-md-6 p-0">
+            <p class="mb-1 font-weight-bold titolo-canzone">${traccia.title}</p>
+            <a class="text-white" href="artist.html?artistId=${traccia.artist.id}">
+            <p class="nome-artista">${traccia.artist.name}</p></a>
         </div>
-    `;
-            let artistaTop = document.querySelector('p a')
-            if (artistaTop) {
-              artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
-          }
+        <div class="col d-md-none pb-2 text-end">
+            <i class="bi bi-three-dots-vertical" style="font-size: 1.5rem;"></i>
+        </div>
+        <div class="col-md-3 me-2 d-none d-md-block text-end">
+            <p class="riproduzioni-totali">${riproduzioniCasuali}</p>
+        </div>
+        <div class="col-md-2 d-none d-md-block text-end">
+            <p class="durata-canzone">${durFormattata}</p>
+        </div>
+        </div>
+    </div>
+  `;
+  
+                let artistaTop = document.querySelector('p a')
+                if (artistaTop) {
+                  artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
+              }
         container.insertAdjacentHTML("beforeend", rigaHTML);
       });
 
