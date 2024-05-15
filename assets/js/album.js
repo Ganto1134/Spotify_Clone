@@ -16,10 +16,18 @@ const getAlbumData = function () {
     })
     .then((album) => {
       console.log("DETTAGLI RECUPERATI", album);
-
-      document.getElementById("album-image").src = album.cover_big;
-      document.querySelector(".img-fluid.rounded-circle").src = album.artist.picture_small;
-      document.querySelector(".titolo-album").innerHTML = album.title;
+      const albumImage = document.querySelectorAll(".album-image");
+      albumImage.forEach((element) => {
+        element.src = album.cover_big;
+      });
+      const artistIcon = document.querySelectorAll(".icona-artista");
+      artistIcon.forEach((element)=> {
+        element.src = album.artist.picture_small;
+      });
+      const titoloAlbum = document.querySelectorAll(".titolo-album");
+      titoloAlbum.forEach((element)=> {
+        element.innerHTML = album.title;
+      });
       const durataInMinuti = album.duration / 60;
       const durataFormattata = `${Math.floor(durataInMinuti)} min ${Math.floor(album.duration % 60)} sec`;
       document.querySelector(".durata-album").innerHTML = durataFormattata;
@@ -27,7 +35,10 @@ const getAlbumData = function () {
         ".numero-brani"
       ).innerHTML = `${album.tracks.data.length} brani`;
       const releaseYear = album.release_date.substring(0, 4);
-      document.querySelector(".anno-album").innerHTML = releaseYear;
+      const annoAlbum = document.querySelectorAll(".anno-album");
+      annoAlbum.forEach((element) => {
+        element.innerHTML = ` · ${releaseYear}`;
+      });
       const artistElements = document.querySelectorAll(".nome-artista");
       artistElements.forEach((element) => {
         element.innerHTML = album.artist.name;

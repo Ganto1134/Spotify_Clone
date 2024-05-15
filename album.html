@@ -21,7 +21,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" type="image/png" href="./assets/imgs/main/spoty.png" />
     <link rel="stylesheet" href="./assets/css/circular-font.css" />
     <link
@@ -32,6 +31,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/album.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -119,8 +120,8 @@
 
         <!-- Seconda colonna, grandezza 7, scrollabile -->
         <div class="col-12 col-md-9 col-lg-7 text-light" id="secondaColonna">
-          <div class="mx-n3" id="album-info">
-            <div class="row" id="album-info">
+          <div class="mx-n3 d-none d-md-block" id="album-info">
+            <div class="row">
               <div
                 class="d-flex justify-content-between align-items-center px-4 p-2"
               >
@@ -151,9 +152,8 @@
                 <div>
                   <img
                     src="./assets/imgs/others/Gioventù Brucata.png"
-                    class="card-image"
                     alt="Card image cap "
-                    id="album-image"
+                    class="album-image"
                   />
                 </div>
                 <div class="text-content mt-2">
@@ -165,7 +165,7 @@
                         style="max-width: 27px"
                         src="./assets/imgs/others/Gioventù Brucata.png"
                         alt="Icona"
-                        class="img-fluid rounded-circle me-2"
+                        class="img-fluid rounded-circle me-2 icona-artista"
                       />
                     </span>
                     <a href="#" class="text-light"
@@ -183,6 +183,33 @@
               </div>
             </div>
           </div>
+          <!-- copertina su mobile -->
+          <div class="row mx-3 justify-content-center d-md-none d-flex">
+            <div class="col">
+              <img
+                src="./assets/imgs/others/Gioventù Brucata.png"
+                alt="Card image cap "
+                class="album-image"
+              />
+            </div>
+            <div class="text-content mt-1">
+              <h2 class="titolo-album mb-2">GIOVENTU' BRUCATA</h1>
+              <h3 class="mb-2 font-weight-bold">
+                <span class="rounded-icon">
+                  <img
+                    style="max-width: 37px"
+                    src="./assets/imgs/others/Gioventù Brucata.png"
+                    alt="Icona"
+                    class="img-fluid rounded-circle me-2 icona-artista"
+                  />
+                </span>
+                <a href="#" class="text-light mt-3"
+                  ><span class="nome-artista">Nome artista</span></a
+                >
+                <p class="mt-3">Album <span class="anno-album"> · Anno</span></p>
+              </h2>
+            </div>
+          </div>
 
           <!-- Seconda riga con icone -->
           <div class="row justify-content-start d-none d-md-flex">
@@ -196,15 +223,14 @@
               <i class="bi bi-three-dots" style="font-size: 2rem"></i>
             </div>
           </div>
-          <div
-            class="row justify-content-between justify-content-between d-md-none d-flex"
-          >
-            <div class="d-flex col-8 align-items-center">
+          <!-- icone mobile -->
+          <div class="row mx-2 justify-content-between d-md-none d-flex">
+            <div class="d-flex col-5 align-items-center">
               <i class="mr-4 bi bi-heart" style="font-size: 2rem"></i>
               <i class="mr-4 bi bi-download" style="font-size: 2rem"></i>
               <i class="bi bi-three-dots" style="font-size: 2rem"></i>
             </div>
-            <div class="col-4 align-items-center text-end">
+            <div class="col-5 align-items-center text-end">
               <i class="mr-4 bi bi-shuffle" style="font-size: 2rem"></i>
               <i
                 class="bi bi-play-circle-fill text-success"
@@ -330,8 +356,8 @@
       </div>
     </div>
     <!------------PLAYER IN BASSO------------------->
-    <section class="sticky-bottom 0">
-      <div class="music-player">
+    <section class="sticky-bottom player-section">
+      <div class="music-player mb-md-5">
         <div class="song-bar">
           <div class="song-infos">
             <div class="image-container">
@@ -348,9 +374,10 @@
           </div>
           <div class="icons">
             <i class="far fa-heart"></i>
+            <i class="d-md-none play-pause fas fa-play"></i>
           </div>
         </div>
-        <div class="progress-controller">
+        <div class="progress-controller mt-3">
           <div class="control-buttons">
             <i class="pointer fas fa-random"></i>
             <i class="pointer fas fa-step-backward"></i>
@@ -371,13 +398,26 @@
           <i class="pointer fas fa-desktop"></i>
           <div class="pointer volume-bar">
             <i class="pointer fas fa-volume-down"></i>
-
             <div class="pointer progress-bar">
               <div class="pointer progress"></div>
             </div>
           </div>
           <i class="fas fa-compress"></i>
         </div>
+      </div>
+      <div class="footer-mobile">
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-house-door-fill px-1"></i>
+          Home
+        </a>
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-search px-1"></i>
+          Cerca
+        </a>
+        <a href="./index.html" class="text-decoration-none grey-text w-75">
+          <i class="bi bi-collection px-1"></i>
+          La tua libreria
+        </a>
       </div>
     </section>
     <script
