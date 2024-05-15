@@ -45,12 +45,14 @@ const getArtistInfo = function() {
                 const durataSecondi = canzone.duration % 60;
                 const durataFormattata = `${durataInMinuti}:${durataSecondi.toString().padStart(2, '0')}`;
                 const newdiv = document.createElement("div");
+
+                // Creo le canzoni in base alle dimensioni dello schermo (maggiori o minori di md)
                 newdiv.innerHTML = `
-                    <div class="row align-items-center mt-2 p-2 song-row" tabindex="0">
+                    <div class="d-none d-md-flex row align-items-center mt-2 p-2 song-row" tabindex="0">
                         <div class="col-7 d-flex align-items-center">
-                            <h6 class="grey-text me-4 numSong">${i+1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
-                            <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
+                            <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
+                            <img src="${canzone.album.cover}" class="me-4" height="50px" alt="img">
+                            <h6 class="text-light song-row pointer">${canzone.title_short}</h6>
                         </div>
                         <div class="col-4">
                             <h6 class="grey-text">100.000.000</h6>
@@ -58,17 +60,31 @@ const getArtistInfo = function() {
                         <div class="col-1">
                             <h6 class="grey-text">${durataFormattata}</h6>
                         </div>
+                    </div>
+
+                    <div class="d-md-none row align-items-center mt-2 p-2 song-row" tabindex="0">
+                        <div class="col-12 d-flex align-items-center">
+                            <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
+                            <img src="${canzone.album.cover}" class="me-4" height="50px" alt="img">
+                            <div>
+                                <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
+                                <h6 class="grey-text">100.000.000</h6>
+                            </div>
+                        </div>
                     </div>`;
                 divPopolari.appendChild(newdiv);
 
                 // Aggiungi event listener al titolo della canzone
-                newdiv.querySelector('.song-row').addEventListener('click', () => {
-                    updateSongInfo(canzone);
-                });
+                const songRows = newdiv.querySelectorAll('.song-row');
+                songRows.forEach(row => {
+                    row.addEventListener('click', () => {
+                        updateSongInfo(canzone);
+                            });
+                        });
 
                 // Aggiungi event listener per l'hover sulla riga della canzone
                 const row = newdiv.querySelector('.song-row');
-                const trackNumberElement = newdiv.querySelector('.numSong');
+                const trackNumberElement = newdiv.querySelector('#numSong');
                 row.addEventListener('mouseover', () => {
                     trackNumberElement.innerHTML = `<i class="fa fa-play small"></i>`;
                 });
@@ -94,6 +110,7 @@ function updateSongInfo(canzone) {
             <p class="artist">${canzone.artist.name}</p>
         </div>
     `;
+    console.log("click")
 }
 
 // Inizia la chiamata API
