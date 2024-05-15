@@ -52,10 +52,10 @@ const getArtistData = function () {
                 divPopolari = document.getElementById("popolari");
                 const newdiv = document.createElement("div");
                 newdiv.innerHTML = `
-                    <div class="row align-items-center mt-2 p-2" tabindex="0" id="rowSongs">
-                        <div class="col-7 d-flex align-items-center">
-                            <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
+                    <div class="row align-items-center px-3">
+                        <div class="col-7 d-flex mt-3 align-items-center">
+                            <h6 class="grey-text me-4">${i+1}</h6>
+                            <img src="${canzone.album.cover}" class="me-4" height="35px" alt="img">
                             <h6 class="text-light">${canzone.title_short}</h6>
                         </div>
                         <div class="col-4">
@@ -66,17 +66,10 @@ const getArtistData = function () {
                         </div>
                     </div>`;
                 divPopolari.appendChild(newdiv);
-                const row = newdiv.querySelector('.row');
-                const trackNumberElement = newdiv.querySelector('#numSong');
-                row.addEventListener('mouseover', () => {
-                    trackNumberElement.innerHTML = `<i class="fa fa-play small"></i>`;
-                });
-                row.addEventListener('mouseout', () => {
-                    trackNumberElement.textContent = i + 1;
-                });
             });
+
+            
         })
-        
         .catch((err) => {
             console.log('ERRORE!', err)
             alert(`An error occurred: ${err.message}`);
