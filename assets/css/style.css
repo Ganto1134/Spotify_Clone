@@ -134,8 +134,8 @@ body {
 
 #secondaColonna {
   overflow-y: auto;
-  height: 92vh;
   background-color: #212121;
+  height: 100vh;
 }
 
 /** HOMEPAGE **/
@@ -209,9 +209,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-
-  height: 9vh;
-  padding: var(--padding);
   color: var(--primary-color);
 }
 i {
@@ -358,14 +355,36 @@ i:hover {
   }
 .footer-mobile {
   display: block;
+  background-color: black;
+  opacity: 0.7;
+  padding-bottom: 0.7;
+
 }
   .song-bar {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-right: 10px; /* Adjust padding to make it look better */
+    padding-right: 63px;
+    padding-left: 2vh;
   }
 
+  .music-player {
+    height: 7vh;
+    margin-bottom: 0vh;
+    width: 96%;
+    margin-inline: auto;
+    background-color: #282828;
+
+  }
+  .image-container {
+    --size: -1.5em;
+  }
+
+  .image-container img {
+    width: 50%;
+    height: 50%;
+    border-radius: 35%;
+  }
   .song-infos {
     display: flex;
     flex: 1; /* Allows this div to grow and fill space */
@@ -405,9 +424,9 @@ i:hover {
 
   .player-section {
     position: fixed;
-    bottom: 75px; /* Raise the player section higher */
+    bottom: 10vh; 
     width: 100%;
-    background-color: #181818; /* Ensure background is set */
+    background-color: transparent;
     z-index: 1000;
     margin: 0;
   }
