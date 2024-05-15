@@ -110,6 +110,7 @@ body {
   overflow-y: auto;
   height: 92vh;
   background-color: #212121;
+  background: linear-gradient(180deg, rgba(33,33,33,1) 51%, rgba(32,32,32,1) 52%, rgba(0,0,0,1) 100%);
   overflow-x: hidden;
 }
 /***STYLE PLAYER*****/
@@ -283,7 +284,8 @@ i:hover {
 .footer-mobile {
   display: block;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(61, 61, 61, 0.468) 17%, rgb(26, 26, 26) 54%, rgba(0,0,0,1) 100%);
   padding-bottom: 0.7;
 
 }
@@ -412,7 +414,7 @@ i:hover {
 }
 
 .bg-btn {
-  background-color: black !important;
+  background-color: rgba(0, 0, 0, 0.363) !important;
 }
 
 .row.align-items-center.mt-2.p-2:hover {
@@ -447,10 +449,21 @@ i:hover {
 }
 
 #numSong {
-  width: 10%;
+  width: 5%;
 }
 
 #basso {
   max-width: 100%;
   width: 55px;
+}
+
+@media screen and (max-width: 768px) {
+
+  #secondaColonna{
+    height: 100vh;
+  }
+
+  #popolari{
+    margin-bottom: 22%;
+  }
 }
