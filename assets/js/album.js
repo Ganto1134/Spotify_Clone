@@ -20,7 +20,7 @@ const getAlbumData = function () {
       albumImage.forEach((element) => {
         element.src = album.cover_big;
       });
-      const artistIcon = document.querySelectorAll(".img-fluid.rounded-circle");
+      const artistIcon = document.querySelectorAll(".icona-artista");
       artistIcon.forEach((element)=> {
         element.src = album.artist.picture_small;
       });
