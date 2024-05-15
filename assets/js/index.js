@@ -9,7 +9,15 @@ let albumSx = document.querySelectorAll('.albumSx')
 // let url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=album%20pop';
 
 document.getElementById('search-input').addEventListener('input', () => {
+    const buonasera = document.getElementById("buonasera")
+    buonasera.classList.add("d-none")
+    const playlist = document.getElementById("playlist")
+    playlist.innerText = "Risultati"
     const searchValue = document.getElementById('search-input').value.trim();
+    if(searchValue===""){
+        buonasera.classList.remove("d-none")
+        playlist.innerText= "Playlist per te" 
+    }
     const url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=' + encodeURIComponent(searchValue);
 
 fetch(url)
