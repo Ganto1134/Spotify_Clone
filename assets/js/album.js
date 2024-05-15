@@ -48,7 +48,7 @@ const getAlbumData = function () {
                 <p id="numero-traccia-${indice}">${indice + 1}</p>
             </div>
             <div class="col-md-6">
-                <p class="mb-1 font-weight-bold titolo-canzone">${
+                <p class="mb-1 font-weight-bold titolo-canzone pointer">${
                   traccia.title
                 }</p>
                 <a class="text-white" href="artist.html?artistId=${traccia.artist.id}"><p class="nome-artista">${traccia.artist.name}</p></a>
@@ -61,17 +61,33 @@ const getAlbumData = function () {
             </div>
         </div>
     `;
-                let artistaTop = document.querySelector('p a')
-                if (artistaTop) {
-                  artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
-              }
         container.insertAdjacentHTML("beforeend", rigaHTML);
+      });
+
+      // Aggiungi event listener per ciascun titolo della canzone
+      document.querySelectorAll(".titolo-canzone").forEach((element, index) => {
+        element.addEventListener('click', () => {
+          updateSongInfo(album.tracks.data[index]);
+        });
       });
     })
     .catch((err) => {
       console.log("ERRORE", err);
     });
 };
+
+function updateSongInfo(canzone) {
+  const player = document.querySelector('.song-infos');
+  player.innerHTML = `
+      <div class="image-container">
+          <img src="${canzone.album.cover}" alt="album cover" />
+      </div>
+      <div class="song-description pointer">
+          <p class="title">${canzone.title}</p>
+          <p class="artist">${canzone.artist.name}</p>
+      </div>
+  `;
+}
 
 getAlbumData();
 
