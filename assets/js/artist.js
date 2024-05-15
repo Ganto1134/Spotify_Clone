@@ -37,7 +37,7 @@ const getArtistInfo = function() {
             }
         })
         .then((song) => {
-            let canzoni = song.data.slice(0, 5);
+            let canzoni = song.data.slice(0, 8);
             const divPopolari = document.getElementById("popolari");
             divPopolari.innerHTML = ""; // Svuota il div per evitare duplicati
             canzoni.forEach((canzone, i) => {
