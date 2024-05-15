@@ -49,13 +49,13 @@ const getArtistInfo = function() {
                     <div class="row align-items-center mt-2 p-2 song-row" tabindex="0">
                         <div class="col-7 d-flex align-items-center">
                             <h6 class="grey-text me-4 numSong">${i+1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4 rounded-1" height="40px" alt="img">
+                            <img src="${canzone.album.cover}" class="me-4" height="50px" alt="img">
                             <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
                         </div>
                         <div class="col-4">
                             <h6 class="grey-text">100.000.000</h6>
                         </div>
-                        <div class="col-1">
+                        <div class="col-1 d-none d-md-block">
                             <h6 class="grey-text">${durataFormattata}</h6>
                         </div>
                     </div>`;

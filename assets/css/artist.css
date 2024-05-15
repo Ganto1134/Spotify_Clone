@@ -413,7 +413,7 @@ i:hover {
 }
 
 .bg-btn {
-  background-color: black !important;
+  background-color: rgba(0, 0, 0, 0.363) !important;
 }
 
 .row.align-items-center.mt-2.p-2:hover {
