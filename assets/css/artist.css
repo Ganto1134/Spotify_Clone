@@ -110,6 +110,7 @@ body {
   overflow-y: auto;
   height: 92vh;
   background-color: #212121;
+  background: linear-gradient(180deg, rgba(33,33,33,1) 51%, rgba(32,32,32,1) 52%, rgba(0,0,0,1) 100%);
   overflow-x: hidden;
 }
 /***STYLE PLAYER*****/
