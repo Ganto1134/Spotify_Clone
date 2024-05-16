@@ -1,21 +1,21 @@
 .album-image {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-  }
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
 
 @media (max-width: 768px) {
-    .album-image {
-      width: 100%;
-      max-width: 80vw; /* Limita la larghezza massima a 400px */
-      height: auto;
-      display: block;
-      margin: 0 auto; /* Centra l'immagine */
-      padding: 2rem;
-      object-fit: cover
-    }
+  .album-image {
+    width: 100%;
+    max-width: 80vw; /* Limita la larghezza massima a 400px */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra l'immagine */
+    padding: 2rem;
+    object-fit: cover;
   }
+}
 
 /* Lato sinistro */
 html,
@@ -164,7 +164,13 @@ body {
 #secondaColonna {
   overflow-y: auto;
   background-color: #212121;
-  height: 100vh;
+  height: 91vh;
+}
+
+@media screen and (max-width: 768px) {
+  #secondaColonna {
+    height: 100vh;
+  }
 }
 
 /** HOMEPAGE **/
@@ -494,6 +500,6 @@ i:hover {
   width: 55px;
 }
 
-#secondaColonna{
+#secondaColonna {
   overflow-x: hidden;
 }
