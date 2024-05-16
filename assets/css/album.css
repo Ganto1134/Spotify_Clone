@@ -294,3 +294,7 @@ i:hover {
   max-width: 100%;
   width: 55px;
 }
+
+#secondaColonna{
+  overflow-x: hidden;
+}
