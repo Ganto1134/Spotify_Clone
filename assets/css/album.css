@@ -469,7 +469,6 @@ i:hover {
   .footer-mobile {
     position: fixed;
     max-height: 10vh;
-    margin-left: -1rem;
     bottom: 0;
     width: 100%;
     z-index: 999;
