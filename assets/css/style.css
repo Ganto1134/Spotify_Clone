@@ -1,3 +1,7 @@
+.d-none {
+  display: none;
+}
+
 /* Lato sinistro */
 html,
 body {
@@ -146,6 +150,10 @@ body {
   overflow-y: auto;
   background-color: #212121;
   height: 100vh;
+}
+
+.testtesttest {
+  background-color: #212121;
 }
 
 /** HOMEPAGE **/
@@ -365,10 +373,19 @@ i:hover {
     display: none; /* Hide elements not needed on mobile */
   }
   .footer-mobile {
-    display: block;
-    background-color: black;
-    opacity: 0.7;
-    padding-bottom: 0.7;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(61, 61, 61, 0.468) 17%, rgb(26, 26, 26) 54%, rgba(0, 0, 0, 1) 100%);
+    padding: 10px 0; /* Adjust padding */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid gray;
+  
   }
   .song-bar {
     display: flex;
@@ -441,18 +458,7 @@ i:hover {
     margin: 0;
   }
 
-  .footer-mobile {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #181818;
-    padding: 10px 0; /* Adjust padding */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid gray;
-  }
+
 
   .footer-mobile a {
     color: white;
