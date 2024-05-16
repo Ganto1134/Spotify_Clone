@@ -1,3 +1,23 @@
+.album-info {
+  position: relative; /* Aggiungiamo posizione relativa per contenere gli elementi figlio */
+  background-size: 100% 130%;
+}
+
+.album-info::after {
+  content: ""; /* Aggiungiamo un pseudo-elemento after */
+  position: absolute; /* Posizioniamo in modo assoluto rispetto al contenitore .album-info */
+  top: 100%; /* Spostiamo il gradiente sotto l'elemento .album-info */
+  left: 0;
+  width: 100%;
+  height: 200px; /* Altezza del gradiente, modificalo a tuo piacimento */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #212121 100%); /* Il tuo gradiente */
+  z-index: -1; /* Portiamo il gradiente dietro gli altri elementi */
+}
+
+.album-info, .col-12, .text-content {
+  background-color: transparent; /* Assicurati che i div interni abbiano sfondo trasparente */
+}
+
 .album-image {
   width: 150px;
   height: 150px;
@@ -164,7 +184,7 @@ body {
 #secondaColonna {
   overflow-y: auto;
   background-color: #212121;
-  height: 91vh;
+  height: 92vh;
 }
 
 @media screen and (max-width: 768px) {

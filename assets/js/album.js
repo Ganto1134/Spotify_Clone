@@ -111,6 +111,8 @@ function updateSongInfo(canzone) {
 
 getAlbumData();
 
+/* gradiente adattivo in base alla copertina */
+
 window.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".album-image");
   const albumInfos = document.querySelectorAll(".album-info");
@@ -119,7 +121,8 @@ window.addEventListener("DOMContentLoaded", function () {
   function applyAverageColorToBackground(image, albumInfo) {
     getAverageColor(image.src)
       .then((color) => {
-        albumInfo.style.background = `linear-gradient(to bottom, ${color}, rgba(0, 0, 0, 0.5))`;
+        
+        albumInfo.style.background = `linear-gradient(to bottom, ${color}, #212121)`;
       })
       .catch((error) => {
         console.error("Si è verificato un errore nel calcolo del colore medio:", error);
@@ -127,15 +130,12 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   // Assicurati che le immagini siano state caricate prima di applicare il colore di sfondo
-  images.forEach((image, index) => {
-    if (image.complete) {
-      applyAverageColorToBackground(image, albumInfos[index]);
-    } else {
+  images.forEach((image, index) => {    
       image.onload = function () {
         applyAverageColorToBackground(image, albumInfos[index]);
-      };
-    }
+      };    
   });
+
 });
 
 // Funzione per calcolare il colore medio dell'immagine
@@ -170,3 +170,5 @@ function getAverageColor(imageUrl) {
     };
   });
 }
+
+
