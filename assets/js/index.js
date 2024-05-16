@@ -8,6 +8,24 @@ let albumSx = document.querySelectorAll('.albumSx')
 
 // let url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=album%20pop';
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const nascondiBtn = document.getElementById('nascondi');
+    const mainCard = document.getElementById('mainCard');
+
+    nascondiBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Previene il comportamento predefinito del link
+
+      mainCard.classList.toggle('d-md-block');
+      if (mainCard.classList.contains('d-md-block')) {
+        nascondiBtn.textContent = 'NASCONDI ANNUNCI';
+      } else {
+        nascondiBtn.textContent = 'MOSTRA ANNUNCI';
+      }
+    });
+  });
+
+
 document.getElementById('search-input').addEventListener('input', () => {
     const searchValue = document.getElementById('search-input').value.trim();
     const url = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=' + encodeURIComponent(searchValue);
