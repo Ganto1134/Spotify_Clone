@@ -17,7 +17,204 @@
     }
   }
 
-  /***STYLE PLAYER*****/
+/* Lato sinistro */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#bg-first {
+  background-color: black;
+  height: 92vh;
+  padding-right: 5px;
+}
+
+.grey-text {
+  color: #a7a7a7;
+}
+
+.bg-btn {
+  background-color: black !important;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 42%;
+  right: 2rem;
+  background-color: #1db954;
+  color: white;
+  box-shadow: 0px 4px 7px rgb(61, 60, 60);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.carta:hover .play-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.play-button:hover {
+  scale: 1.05;
+}
+
+.play-button:active {
+  background-color: #168a3f;
+}
+
+.row a:hover {
+  color: white;
+  transition: 250ms;
+}
+
+.row a i:hover {
+  color: white;
+  transition: 250ms;
+}
+
+#plus {
+  background-color: #a7a7a7;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #787878;
+} /* STYLE COL DX  */
+
+.d-flex h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.justify-content-between h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #a7a7a7;
+}
+
+.mini {
+  color: #a7a7a7;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.amici {
+  width: 35px;
+}
+
+#primaColonna {
+  overflow-y: auto;
+  height: 30rem;
+}
+
+#mainCard {
+  background: linear-gradient(to bottom left, #212121 30%, black 70%);
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.small-text {
+  font-size: 12px;
+  margin: 0;
+}
+
+.top-right-text {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+#secondaColonna {
+  overflow-y: auto;
+  background-color: #212121;
+  height: 100vh;
+}
+
+/** HOMEPAGE **/
+.playlist-card {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+}
+.playlist-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.playlist-title {
+  font-size: 1rem;
+  margin: 0;
+}
+.bg-playlist {
+  background-color: #171717 !important;
+  height: 100%;
+}
+
+/* CARD GENERATE CON JS */
+
+.col-xl-3 .carta {
+  background-color: #171717;
+}
+
+.col-xl-3 .carta:hover {
+  background-color: transparent;
+}
+
+.card-body {
+  padding-bottom: 0 !important;
+}
+
+.card-body .card-title {
+  color: white;
+}
+
+.card-body .card-text {
+  color: #909090;
+}
+
+.col-xl-3 .card {
+  padding-bottom: 0 !important;
+}
+
+/***STYLE PLAYER*****/
 
 @import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
 
@@ -201,7 +398,7 @@ i:hover {
   }
 
   .music-player {
-    height: 7vh;
+    height: 9vh;
     margin-bottom: 0vh;
     width: 96%;
     margin-inline: auto;
@@ -265,6 +462,8 @@ i:hover {
 
   .footer-mobile {
     position: fixed;
+    max-height: 10vh;
+    margin-left: -1rem;
     bottom: 0;
     width: 100%;
     z-index: 999;
