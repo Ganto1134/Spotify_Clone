@@ -187,7 +187,7 @@ body {
 #secondaColonna {
   overflow-y: auto;
   background-color: #212121;
-  height: 92vh;
+  height: 91vh;
 }
 
 @media screen and (max-width: 768px) {
