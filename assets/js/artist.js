@@ -87,6 +87,8 @@ const getArtistInfo = function() {
                 songRows.forEach(row => {
                     row.addEventListener('click', () => {
                         updateSongInfo(canzone);
+                        playTrack(canzone.preview)
+
                             });
                         });
 
@@ -108,6 +110,14 @@ const getArtistInfo = function() {
 };
 
 function updateSongInfo(canzone) {
+    const playPauseDiv = document.querySelector('.control-buttons');
+    playPauseDiv.innerHTML=`
+    <audio id="trackPlayer" controls style="display: none"></audio>
+            <i class="pointer fas fa-random"></i>
+            <i class="pointer fas fa-step-backward"></i>
+            <i class="pointer play-pause fas fa-pause trigger"></i>
+            <i class="pointer fas fa-step-forward"></i>
+            <i class="pointer fas fa-undo-alt"></i>`
     const songInfos = document.querySelector('.song-infos');
     songInfos.innerHTML = `
         <div class="image-container">
@@ -119,7 +129,67 @@ function updateSongInfo(canzone) {
         </div>
     `;
     console.log("click")
+    playFunc();
+    progressFunc();
 }
+
+
+const playFunc = function () {
+    const playPauseButton = document.querySelectorAll(".trigger");
+    playPauseButton.forEach((button)=>{
+        // Aggiungi evento di click al pulsante play/pausa
+        button.addEventListener('click', function () {
+            const audioPlayer = document.getElementById('trackPlayer');
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                button.classList.remove('fa-play');
+                button.classList.add('fa-pause');
+                
+            } else {
+                audioPlayer.pause();
+                button.classList.remove('fa-pause');
+                button.classList.add('fa-play');
+            }
+        });
+
+    })
+}
+
+const progressFunc = function () {
+    const audioPlayer = document.getElementById('trackPlayer');
+    const progressBar = document.querySelector('.progress');
+  
+    audioPlayer.addEventListener('timeupdate', function () {
+      const duration = audioPlayer.duration;
+      const timeSong = document.getElementById("songTime")
+      timeSong.innerHTML= formatTime(duration)
+      const currentTime = audioPlayer.currentTime;
+      const startTime = document.getElementById("startTime")
+      startTime.innerHTML= formatTime(currentTime)
+  
+      // Calcola la percentuale completata
+      const progressPercent = (currentTime / duration) * 100;
+  
+      // Aggiorna la larghezza della barra di progressione
+      progressBar.style.width = progressPercent + '%';
+    });
+  };
+
+const formatTime = function (time) {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+  
+    // Aggiungi uno zero iniziale se i secondi sono inferiore a 10
+    const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+  
+    return minutes + ':' + formattedSeconds;
+};
+
+const playTrack = (previewUrl) => {
+    const audioPlayer = document.getElementById('trackPlayer');
+    audioPlayer.src = previewUrl;
+    audioPlayer.play();
+  };
 
 // Inizia la chiamata API
 getArtistData();
