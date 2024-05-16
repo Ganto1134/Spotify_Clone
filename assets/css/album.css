@@ -19,6 +19,7 @@
 }
 
 .album-image {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 150px;
   height: 150px;
   object-fit: cover;
@@ -27,12 +28,14 @@
 
 @media (max-width: 768px) {
   .album-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 80vw; /* Limita la larghezza massima a 400px */
     height: auto;
     display: block;
     margin: 0 auto; /* Centra l'immagine */
-    padding: 2rem;
+    margin-top: 3em;
+    margin-bottom: 2em;
     object-fit: cover;
   }
 }
