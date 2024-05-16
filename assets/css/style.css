@@ -396,7 +396,7 @@ i:hover {
   }
 
   .music-player {
-    height: 7vh;
+    height: 10vh;
     margin-bottom: 0vh;
     width: 96%;
     margin-inline: auto;
@@ -458,7 +458,19 @@ i:hover {
     margin: 0;
   }
 
-
+  .footer-mobile {
+    position: fixed;
+    max-height: 10vh;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #181818;
+    padding: 10px 0; /* Adjust padding */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid gray;
+  }
 
   .footer-mobile a {
     color: white;
