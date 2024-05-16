@@ -457,6 +457,10 @@ i:hover {
   width: 55px;
 }
 
+#shuffle:focus{
+  color: #1db954!important;
+}
+
 @media screen and (max-width: 768px) {
 
   #secondaColonna{

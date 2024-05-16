@@ -166,19 +166,42 @@
             </div>
           </section>
           <section id="secondPart">
-            <div class="row p-3">
-              <div class="col d-flex align-items-center">
-                <button class="play-button me-3">
-                  <i class="fa fa-play"></i>
-                </button>
+            <!-- Seconda riga con icone -->
+            <div class="col d-none d-md-flex align-items-center">
+              <button class="play-button me-3">
+                <i class="fa fa-play"></i>
+              </button>
+              <span
+                class="text-light me-4 px-3 py-1 fw-semibold small"
+                id="following"
+                >FOLLOWING</span
+              >
+              <a href="#"><i class="bi bi-three-dots grey-text fs-3"></i></a>
+            </div>
+            <!-- icone mobile -->
+            <div class="row mx-2 justify-content-between d-md-none">
+              <div class="d-flex col-5 align-items-center">
                 <span
-                  class="text-light me-4 px-3 py-1 fw-semibold small"
+                  class="text-light me-4 px-3 py-1 fw-semibold border border-1 border-dark small"
                   id="following"
-                  >FOLLOWING</span
+                  >SEGUITI</span
                 >
-                <a href="#"><i class="bi bi-three-dots grey-text fs-3"></i></a>
+                <a href="#"
+                  ><i class="bi bi-three-dots-vertical text-light fs-2"></i
+                ></a>
+              </div>
+              <div class="col-5 d-flex align-items-center justify-content-end">
+                <i
+                  class="mr-4 bi bi-shuffle text-light fs-2"
+                  id="shuffle"
+                  tabindex="0"
+                ></i>
+                <button class="play-button">
+                  <i class="fa fa-play text-light"></i>
+                </button>
               </div>
             </div>
+            <!-- Fine Icone mobile  -->
             <div class="row flex-column-reverse flex-md-row p-3 mb-5 mb-md-2">
               <div class="col-12 col-md-7">
                 <h4 class="text-light fw-semibold">Popolari</h4>
