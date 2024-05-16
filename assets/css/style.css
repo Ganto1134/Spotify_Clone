@@ -379,7 +379,7 @@ i:hover {
   }
 
   .music-player {
-    height: 7vh;
+    height: 10vh;
     margin-bottom: 0vh;
     width: 96%;
     margin-inline: auto;
@@ -443,6 +443,7 @@ i:hover {
 
   .footer-mobile {
     position: fixed;
+    max-height: 10vh;
     bottom: 0;
     width: 100%;
     z-index: 999;

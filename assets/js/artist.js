@@ -63,14 +63,22 @@ const getArtistInfo = function() {
                     </div>
 
                     <div class="d-md-none row align-items-center mt-2 p-2 song-row" tabindex="0">
-                        <div class="col-12 d-flex align-items-center">
-                            <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
-                            <img src="${canzone.album.cover}" class="me-4" height="50px" alt="img">
-                            <div>
-                                <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
-                                <h6 class="grey-text">100.000.000</h6>
+                        <div class="col-12">
+                            <div class="row align-items-center">
+                                <div class="col-1 d-flex">
+                                    <h6 class="grey-text me-4" id="numSong">${i+1}</h6>
+                                </div>
+                                <div class="col-2 d-flex">
+                                <img src="${canzone.album.cover}" class="me-4" height="50px" alt="img">
+                                </div>
+                                <div class="col-8">
+                                    <h6 class="text-light song-title pointer">${canzone.title_short}</h6>
+                                    <h6 class="grey-text">100.000.000</h6>
+                                </div>
+                                <div class="col-1 d-flex">
+                                    <i class="bi bi-three-dots-vertical text-light"></i>
+                                </div>
                             </div>
-                        </div>
                     </div>`;
                 divPopolari.appendChild(newdiv);
 
