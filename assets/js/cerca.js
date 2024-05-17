@@ -36,7 +36,8 @@ document.getElementById('search-input').addEventListener('input', () => {
                         <img src="${song.album.cover_medium}" class="card-img-top" alt="Cover di ${song.title}">
                         <div class="card-body">
                             <h5 class="card-title">${song.title_short}</h5>
-                            <p class="card-text">${song.artist.name}</p>
+                            <a class="text-white" href="artist.html?artistId=${song.artist.id}">
+                            <p class="card-text">${song.artist.name}</p></a>
                         </div>
                     </div>
                 `;
