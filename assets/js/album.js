@@ -77,6 +77,16 @@ const getAlbumData = function () {
     </div>
   `;
   
+  updateSongInfo(traccia)
+  const playPauseDiv = document.querySelector('.control-buttons');
+  playPauseDiv.innerHTML=`
+  <audio id="trackPlayer" controls style="display: none"></audio>
+          <i class="pointer fas fa-random"></i>
+          <i class="pointer fas fa-step-backward"></i>
+          <i class="pointer play-pause fas fa-play trigger"></i>
+          <i class="pointer fas fa-step-forward"></i>
+          <i class="pointer fas fa-undo-alt"></i>`
+
           let artistaTop = document.querySelector('p a')
           if (artistaTop) {
             artistaTop.href = `artist.html?artistId=${traccia.artist.id}`;
@@ -96,20 +106,6 @@ const getAlbumData = function () {
       console.log("ERRORE", err);
     });
 };
-
-function updateSongInfo(canzone) {
-  const player = document.querySelector('.song-infos');
-  player.innerHTML = `
-      <div class="image-container">
-          <img src="${canzone.album.cover}" alt="album cover" />
-      </div>
-      <div class="song-description pointer">
-          <p class="title">${canzone.title}</p>
-          <p class="artist">${canzone.artist.name}</p>
-      </div>
-  `;
-}
-
 
 
 /* gradiente adattivo in base alla copertina */
@@ -173,7 +169,7 @@ function getAverageColor(imageUrl) {
 }
 
 
-function updateSongInfo(canzone) {
+function updateSongInfo(canzone) {  
   const playPauseDiv = document.querySelector('.control-buttons');
   playPauseDiv.innerHTML=`
   <audio id="trackPlayer" controls style="display: none"></audio>
