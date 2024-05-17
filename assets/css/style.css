@@ -165,9 +165,6 @@ background-color: #E8125C!important;
 .card-title {
   font-size: 1rem;
   margin-bottom: 10px;
-  position: absolute; /* Posiziona l'elemento h5 in alto a sinistra */
-  top: 10px;
-  left: 10px;
 }
 
 .corner-image {
