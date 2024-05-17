@@ -33,7 +33,8 @@ document.getElementById('search-input').addEventListener('input', () => {
                 card.className = 'col-6 col-md-4 col-lg-3 mb-3';
                 card.innerHTML = `
                     <div class="card bg-dark text-light p-2">
-                        <img src="${song.album.cover_medium}" class="card-img-top" alt="Cover di ${song.title}">
+                    <a class="text-white" href="album.html?albumtId=${song.album.id}">
+                        <img src="${song.album.cover_medium}" class="card-img-top" alt="Cover di ${song.title}"></a>
                         <div class="card-body">
                             <h5 class="card-title">${song.title_short}</h5>
                             <a class="text-white" href="artist.html?artistId=${song.artist.id}">
